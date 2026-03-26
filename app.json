@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "NG Motorista",
+    "slug": "ng-motorista",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "ngmotorista",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B00"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.ngmotorista.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Precisamos da sua localização para mostrar sua posição no mapa em tempo real.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Precisamos da sua localização para rastrear suas corridas.",
+        "NSCameraUsageDescription": "Precisamos da câmera para verificação facial diária e foto de perfil.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar suas fotos para upload de documentos e foto de perfil.",
+        "NSPhotoLibraryAddUsageDescription": "Precisamos salvar fotos dos seus documentos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B00"
+      },
+      "package": "com.ngmotorista.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Precisamos da sua localização para o mapa."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Precisamos da câmera para verificação facial."
+        }
+      ]
+    ]
+  }
+}
